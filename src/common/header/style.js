@@ -86,7 +86,7 @@ const SearchWrapper = styled.div`
   float: left;
   position: relative;
   
-  .iconfont{
+  .zoom{
     position: absolute;
     right: 5px;
     top: 13px;
@@ -131,6 +131,55 @@ const Button = styled.div`
   }
 `
 
+const SearchInfo = styled.div`
+  position: absolute;
+  left: 0;
+  top: 56px;
+  width: 240px;
+  padding: 20px 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+`
+
+const SearchInfoTitle = styled.div`
+  margin-bottom: 10px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #969696;
+`
+
+const SearchInfoSwitch = styled.span`
+  font-size: 13px;
+  float: right;
+  cursor: pointer;
+  &:hover{
+    color: #333;
+  }
+  .spin{
+    margin-right: 4px;
+    font-size: 12px;
+    display: inline-block;
+    transition: all .3s ease-in;
+    transform-origin: center center;
+  }
+`
+
+const SearchInfoList = styled.div`
+  overflow: hidden;
+`
+
+const SearchInfoItem = styled.a`
+  font-size: 12px;
+  padding: 0 5px;
+  line-height: 20px;
+  display: block;
+  float: left;
+  margin: 0 10px 10px 0;
+  border: 1px solid #ddd;
+  color: #787878;
+  border-radius: 3px;
+  cursor: pointer;
+`
+
 export {
   HeaderWrapper,
   Logo,
@@ -140,4 +189,9 @@ export {
   Addition,
   Button,
   SearchWrapper,
+  SearchInfo,
+  SearchInfoTitle,
+  SearchInfoList,
+  SearchInfoSwitch,
+  SearchInfoItem,
 }
