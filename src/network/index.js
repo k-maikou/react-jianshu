@@ -1,5 +1,6 @@
 import { request } from './request';
 
+/**********Home**********/
 export function getHomeDataHttp() {
   return request({
     url: '/api/home.json'
@@ -14,3 +15,17 @@ export function getHomeListData(page) {
     }
   })
 };
+/**********Home**********/
+
+/**********Detail**********/
+
+export function getDetailInfo(id) {
+  return request({
+    url: "/api/detail.json",
+    params: {
+      id
+    }
+  })
+};
+
+/**********Detail**********/

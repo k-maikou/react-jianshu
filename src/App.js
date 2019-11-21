@@ -19,7 +19,7 @@ class App extends Component {
             <Header />
             <Suspense fallback={<div>loading...</div>}>
               <Route exact path='/' component={Home}></Route>
-              <Route exact path='/detail' component={Detail}></Route>
+              <Route exact path='/detail/:id' component={Detail}></Route>
             </Suspense>
           </BrowserRouter>
       </Provider>
