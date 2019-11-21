@@ -7,7 +7,7 @@ const HeaderWrapper = styled.div`
   border-bottom: 1px solid #f0f0f0;
 `
 
-const Logo = styled.a.attrs({href: '/'})`
+const Logo = styled.div`
   height: 56px;
   width: 100px;
   display: block;
@@ -115,7 +115,7 @@ const Button = styled.div`
   margin-top: 9px;
   border: 1px solid #ec6149;
   margin-right: 20px;
-  padding: 0 25px;
+  padding: 0 20px;
   font-size: 14px;
   &.reg{
     color: #ec6149;
@@ -138,6 +138,7 @@ const SearchInfo = styled.div`
   width: 240px;
   padding: 20px 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+  background-color: #fff;
 `
 
 const SearchInfoTitle = styled.div`

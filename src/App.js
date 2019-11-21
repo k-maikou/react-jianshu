@@ -13,17 +13,15 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div>
           <GlobalStyle />
           <IconStyle />
-          <Header />
           <BrowserRouter>
+            <Header />
             <Suspense fallback={<div>loading...</div>}>
               <Route exact path='/' component={Home}></Route>
               <Route exact path='/detail' component={Detail}></Route>
             </Suspense>
           </BrowserRouter>
-        </div>
       </Provider>
     )
   }
