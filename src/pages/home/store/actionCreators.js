@@ -34,21 +34,29 @@ export const clickPageChange = (page) => ({
 export const toggleTopShow = (show) => ({
   type: constants.TOGGLE_TOP_SHOW,
   show
-})
+});
 
 export const getMoreList = (page) => {
   return async (dispatch) => {
-    const { data } = await getHomeListData(page);
-    console.log(data);
-    dispatch(addHomeList(data.data, page + 1));
+    try {
+      const { data } = await getHomeListData(page);
+      console.log(data);
+      dispatch(addHomeList(data.data, page + 1));
+    } catch(err) {
+      throw err;
+    }
   }
 };
 
 export const getDataInformation = () => {
   return async(dispatch) => {
-    // const { data } = await axios.get('/api/home.json');
-    const { data } = await getHomeDataHttp();
-    const { topicList, articleList, recommendList, writerList } = data.data;
-    dispatch(homeAllData(topicList, articleList, recommendList, writerList));
+    try {
+      // const { data } = await axios.get('/api/home.json');
+      const { data } = await getHomeDataHttp();
+      const { topicList, articleList, recommendList, writerList } = data.data;
+      dispatch(homeAllData(topicList, articleList, recommendList, writerList));
+    } catch(err) {
+      throw err;
+    }
   }
 };

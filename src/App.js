@@ -8,6 +8,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 const Home = lazy(() => import('./pages/home'));
 const Detail = lazy(() => import('./pages/detail'));
+const Login = lazy(() => import('./pages/login'));
+const Write = lazy(() => import('./pages/write'));
 
 class App extends Component {
   render() {
@@ -20,6 +22,8 @@ class App extends Component {
             <Suspense fallback={<div>loading...</div>}>
               <Route exact path='/' component={Home}></Route>
               <Route exact path='/detail/:id' component={Detail}></Route>
+              <Route exact path='/login' component={Login}></Route>
+              <Route exact path='/write' component={Write}></Route>
             </Suspense>
           </BrowserRouter>
       </Provider>

@@ -5,6 +5,7 @@ const HeaderWrapper = styled.div`
   position: relative;
   height: 56px;
   border-bottom: 1px solid #f0f0f0;
+  z-index: 1;
 `
 
 const Logo = styled.div`
@@ -49,6 +50,9 @@ const NavItem = styled.div`
   }
   &.active{
     color: #ea6f5a;
+  }
+  &.out{
+    cursor: pointer;
   }
 `
 

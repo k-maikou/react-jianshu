@@ -29,3 +29,17 @@ export function getDetailInfo(id) {
 };
 
 /**********Detail**********/
+
+/************Login************/
+
+export function getLogin(account, password) {
+  return request({
+    url: '/api/login.json',
+    params: {
+      account,
+      password
+    }
+  })
+}
+
+/************Login************/
